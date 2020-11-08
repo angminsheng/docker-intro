@@ -11,3 +11,9 @@ services:
       - .:/usr/src/app
     command:
       ["npm", "start"]
+  node-test:
+    build: .
+    volumes:
+      - /usr/src/app/node_modules
+      - .:/usr/src/app
+    command: ["npm", "test"]
