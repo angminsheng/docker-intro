@@ -1,5 +1,6 @@
 const express = require(`express`)
 const redis = require(`redis`)
+const welcomeMessage = require(`./welcomeMessage`)
 
 // Express app
 const app = express()
@@ -18,7 +19,7 @@ client.set(KEY, 0)
 //Routes HTTP GET requests to the specified path with the specified callback functions.
 app.get(`/`,(req,res)=>{
   client.get(KEY, (err, visitCount)=>{
-    res.send(`Welcome to node application~~ you have visited the page ${visitCount} time.`)
+    res.send(`${welcomeMessage(`Min`)}~~ you have visited the page ${visitCount} time.`)
 
     client.set(KEY, Number(visitCount) + 1)
   })

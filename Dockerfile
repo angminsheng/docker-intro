@@ -8,6 +8,8 @@ COPY ./package*.json ./
 
 RUN npm install
 
+RUN npm config set unsafe-perm true && npm install -g nodemon
+
 COPY ./ ./
 
 CMD ["npm", "start"]
