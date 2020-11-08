@@ -6,7 +6,7 @@ const PORT = 8090
 
 //Routes HTTP GET requests to the specified path with the specified callback functions.
 app.get(`/`,(req,res)=>{
-  res.send(`Welcome to node application`)
+  res.send(`Welcome to node application~~`)
 })
 
 
