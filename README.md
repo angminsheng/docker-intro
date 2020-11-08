@@ -20,3 +20,26 @@ npm install express
 Dockerize our node application.
 - Here we will go through the main topic of the day where we will introduce docker into our project.
 create a `Dockerfile` in our current directory.
+
+Docker build with image tag
+```js
+docker build -t <name>/node-application .
+```
+Docker run built image
+```js
+docker run <name>/node-application
+```
+
+Docker run container in interactive mode
+```js
+docker run -it <name>/node-application sh
+```
+
+Docker exec to Run a command in a running container
+```js
+docker exec -it ff05df79856ea514fe8796c5248c1e1c0e2dbfd4a07a77515d96658ea61af7b7 sh
+```
+
+## PART Three
+Adding a database to our node application and create a docker-compose file
+- Here we will add a very basic redis database to our node application
