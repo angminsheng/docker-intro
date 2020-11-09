@@ -56,3 +56,9 @@ Introducing concept of docker volume
 
 ## PART Five
 Adding unit test to our node application and create a running container to watch and run unit test
+
+## PART Six
+multistage build
+```js
+docker build . -t <appName> -target=imageName
+```

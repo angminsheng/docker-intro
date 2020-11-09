@@ -3,7 +3,9 @@ services:
   redis-server:
     image: 'redis'
   node-application:
-    build: .
+    build:
+      context: ./
+      target: dev
     ports:
       - "8090:8090"
     volumes:
